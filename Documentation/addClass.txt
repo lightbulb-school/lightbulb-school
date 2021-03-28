@@ -1,0 +1,1 @@
+when adding class take note of the hierarchy order of how yo place classes. thus, the added class can not be placed on top of the original class.

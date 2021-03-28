@@ -1,0 +1,1 @@
+onclick="location.href='search.php?search=<?php echo''; ?>'"

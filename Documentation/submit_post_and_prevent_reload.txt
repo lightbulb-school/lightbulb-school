@@ -1,0 +1,75 @@
+<div class= "main col-xs-9 well">
+  <h2 style="color: black" class="featurette-heading">Join our mailing list!</h2>
+  <form id="main" method = "post" class="form-inline">
+    <label for="inlineFormInput">Name</label>
+    <input type="text" id="name" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Jane Doe">
+    <label for="inlineFormInputGroup">Email</label>
+    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+      <input type="text" id="email" class="form-control" id="inlineFormInputGroup" placeholder="janedoe@email.com">
+    </div>
+    <!--Plan to write success message here -->
+    <label id="success_message"style="color: darkred"></label>
+    <button id ="button" type="submit" value="send" class="btn btn-primary">Submit</button>
+  </form>
+------------------------------------------------------------------------------------------------
+
+Better variant:
+In this improvement, we listen to the submit event emitted from the <form> element:
+
+$(document).ready(function () {
+  // Listen to submit event on the <form> itself!
+  $('#main').submit(function (e) {
+
+    e.preventDefault();
+
+    var name = $("#name").val();
+    var email = $("#email").val();
+
+    $.post("process.php", {
+      name: name,
+      email: email
+    }).complete(function() {
+        console.log("Success");
+      });
+  });
+});
+
+--------------------------------------------------------------------------------------------------
+Even better variant: use .serialize() to serialize your form, but remember to add name attributes to your input:
+The name attribute is required for .serialize() to work, as per jQuery's documentation:
+
+For a form element's value to be included in the serialized string, the element must have a name attribute.
+
+<input type="text" id="name" name="name" class="form-control mb-2 mr-sm-2 mb-sm-0" id="inlineFormInput" placeholder="Jane Doe">
+<input type="text" id="email" name="email" class="form-control" id="inlineFormInputGroup" placeholder="janedoe@email.com">
+And then in your JS:
+
+$(document).ready(function () {
+  // Listen to submit event on the <form> itself!
+  $('#main').submit(function (e) {
+
+    // Prevent form submission which refreshes page
+    e.preventDefault();
+
+    // Serialize data
+    var formData = $(this).serialize();
+
+    // Make AJAX request
+    $.post("process.php", formData).complete(function() {
+      console.log("Success");
+    });
+  });
+});
+--------get and pass data----------------------------------------------------------------
+function search($search_item){
+    
+    $.ajax({
+    type: "POST",
+    url: 'model.php',
+    data: {search_item:$search_item},
+    success: function(data){
+    //===reload the View===========================================
+    $(".View-container").load("model.php", {search_item : $search_item} );
+    }
+    });     
+    }

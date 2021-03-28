@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+.lightbulb-home-page-body {
+    width: 100vw;
+    min-height: 100vh;
+    /* overflow-y: scroll; */
+    /* background-color: whitesmoke; */
+}
+
+.options-tb{
+    padding-bottom: 75px;
+}
+table{
+    padding-bottom: 75px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  

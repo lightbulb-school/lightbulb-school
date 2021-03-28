@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="162" height="114.901" viewBox="0 0 162 114.901">
+  <g id="camera1" transform="translate(-932 -587.677)">
+    <path id="Path_769" data-name="Path 769" d="M455.273,331.6H372.638l2.032-5.676,1.757-4.91,2.984-8.334h69.281l2.9,8.334,1.984,5.706Z" transform="translate(598.918 275.001)" fill="#fff"/>
+    <path id="Path_770" data-name="Path 770" d="M458,362.62H380.261v-1.346l1.731-8.3h74.055Z" transform="translate(593.961 247.804)" opacity="0.1"/>
+    <rect id="Rectangle_341" data-name="Rectangle 341" width="154" height="96.001" rx="1" transform="translate(936 602.577)" fill="none" stroke="#fff" stroke-width="8"/>
+    <circle id="Ellipse_292" data-name="Ellipse 292" cx="22.492" cy="22.492" r="22.492" transform="translate(989.508 628.077)" fill="#fff"/>
+    <circle id="Ellipse_295" data-name="Ellipse 295" cx="6.048" cy="6.048" r="6.048" transform="translate(1061.641 617.062)" fill="#fff"/>
+  </g>
+</svg>
