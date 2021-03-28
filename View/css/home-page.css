@@ -12,9 +12,11 @@ body {
 .options-tb{
     padding-bottom: 75px;
 }
+
 table{
     padding-bottom: 75px;
 }
+
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
