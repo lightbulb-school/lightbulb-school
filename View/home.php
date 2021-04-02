@@ -5,6 +5,7 @@ $page_count='';
 $page_label='';
 $journal='lb_journal_';
 $document='lb_document_';
+$page_name='home';
 ?>
 
 <!DOCTYPE html>
@@ -157,14 +158,13 @@ if ($page_count==1) {
     <form id="search-form" method="post">
         <div id='lightbulb-home-page-body' class="lightbulb-home-page-body">
             <?php include('View/header.php');?>
-            <div class='main-question-label' style='height:50px;color:black;background-color:'>
+            <div class='main-question-label'>
             </div>
             <!--testing window wrapper  -->
-            <div class='window-wrapper' style='background-color:#9acd32;padding-left:1%;padding-right:1%'>
-                <div id='side-menu-cont' class='side-menu-cont' style='background-color:blue;'>
+            <div class='window-wrapper'>
+                <div id='side-menu-cont' class='side-menu-cont'>
                     <!-- brainstorm container -->
-                    <div id='inner-side-menu-cont' class='inner-side-menu-cont brainstorm-container'
-                        style='background-color:grey'>
+                    <div id='inner-side-menu-cont' class='inner-side-menu-cont brainstorm-container'>
                         <!--start selection  -->
                         <?php// include('View/rightsidemenu_v1.php');?>
                         <?php include('View/rightsidemenu.php');?>
@@ -173,8 +173,8 @@ if ($page_count==1) {
                     </div>
                     <!-- -------------------------------- -->
                 </div>
-                <div id="search-cont" class="search-cont" style="background-color:#590098">
-                    <div class='banner-cont' style="background-color:#d01d9b">
+                <div id="search-cont" class="search-cont">
+                    <div class='banner-cont' style="">
                     </div>
                     <div id='search-results-cont' class='search-results-cont'>
                         <div id='inner-search-results-cont'>
@@ -205,7 +205,7 @@ if ($page_count==1) {
                 </div> -->
                             <!-- -------end of posting question to lightbulb------- -->
 
-                            <hr class='tag-devider'>
+                            <hr class='tag-divider'>
                             <?php
                 if (isset($_GET['search'])) {
                     echo$que=$_GET['search'];
@@ -216,7 +216,7 @@ if ($page_count==1) {
                     $question_count=0;
                     foreach ($questions as $question) {
                         $question_count++; ?>
-                            <div class='question-bubble-cont' style='display:nonex;background-color:green'>
+                            <div class='question-bubble-cont'>
                                 <script>
                                 $(document).ready(function() {
                                     manage_bubble(<?php echo$question_count ?>,
@@ -240,16 +240,15 @@ if ($page_count==1) {
                                 </div>
                             </div>
 
-                            <hr class='tag-devider'>
+                            <hr class='tag-divider'>
 
                             <?php
                     $answer_count=0;
                         foreach ($answers as $answer) {
                             $answer_count++; ?>
                             <!-- ------------------------------- -->
-                            <div class='answer-bubble-cont' style='display:nonex;background-color:green'>
-                                <div id='manage-bubble' class='answer-bubble manage-bubble'
-                                    style='background-color:red'>
+                            <div class='answer-bubble-cont'>
+                                <div id='manage-bubble' class='answer-bubble manage-bubble'>
                                     <div class='name-and-pic-cont'>
                                         <div class='search-answer-img'></div>
                                         <div class='search-answer-cfg-img'></div>
@@ -258,7 +257,7 @@ if ($page_count==1) {
                                     </div>
                                     <div class='answer-img'>
                                     </div>
-                                    <hr class='tag-devider'>
+                                    <hr class='tag-divider'>
                                     <div class='source-type'>
                                         <div class='times-copied'>
                                             Copied: <?php echo $Copied ?>*
@@ -280,7 +279,7 @@ if ($page_count==1) {
                                             paraphrase
                                         </span> -->
                                     </div>
-                                    <hr class='tag-devider'>
+                                    <hr class='tag-divider'>
                                     <div class='search-clipboard'
                                         onclick="Copy_answer_ToClipboard('search_result<?php echo $answer['id'] ?>')">
                                         <span class='i-con-propaties'><i
@@ -456,22 +455,20 @@ if ($page_count==1) {
                                     <?php
                             } ?>
                                     <!-- ------------ -->
-                                    <div class='likes-and-emojis' style='background-color:blue;'>
+                                    <div class='likes-and-emojis'>
                                         <div class='likes-and-emojis-btns likes-btn'
-                                            onclick="like('<?php echo $question_count ?>')"
-                                            style='background-color:purple'>
+                                            onclick="like('<?php echo $question_count ?>')">
                                             <img src="View/images/like.svg"
                                                 class='likes likes<?php echo $question_count ?>'>
                                         </div>
                                         <div class='likes-and-emojis-btns dislikes-btn'
-                                            onclick="dislike('<?php echo $question_count ?>')"
-                                            style='background-color:orange'>
+                                            onclick="dislike('<?php echo $question_count ?>')">
                                             <img src="View/images/dislike.svg"
                                                 class='dislikes dislikes<?php echo $question_count ?>'>
                                         </div>
-                                        <div class='likes-and-emojis-btns' style='background-color:green'></div>
-                                        <div class='likes-and-emojis-btns' style='background-color:purple'></div>
-                                        <div class='likes-and-emojis-btns emoji-btn' style='background-color:grey'>
+                                        <div class='likes-and-emojis-btns likes1'></div>
+                                        <div class='likes-and-emojis-btns likes2'></div>
+                                        <div class='likes-and-emojis-btns likes3 emoji-btn'>
                                             <img src="View/images/smile.svg" class='smiley'>
                                         </div>
                                     </div>
@@ -542,21 +539,21 @@ if ($page_count==1) {
                             <!-- ----------------------------- -->
                         </div>
                     </div>
-                    <hr class='search-devider'>
-                    <div class='search-input-cont-placeholder' style="background-color:#850050;">
-                        <div style="width:700px;height:100px;background-color:grey;position:fixed;bottom:0px;">
+                    <hr class='search-divider'>
+                    <div class='search-input-cont-placeholder'>
+                        <div class='inner-search-place-holder'>
                         </div>
-                        <div class='search-input-cont' style="border-color:#850050;">
+                        <div class=' search-input-cont'>
                             <!-- <input type='text' onkeypress="check_text_field()" id='l-b-search' class='l-b-search-input'
                         placeholder='Search Lightbulb'> -->
                             <!-- -------------------------- -->
-                            <div class='l-b-search-input-wrapper' style='background-color:#ec21f3 !important'>
+                            <div class='l-b-search-input-wrapper'>
                                 <textarea onkeypress="check_text_field()" onpaste="pasted_query()"
                                     oninput="auto_grow(this)" id='l-b-search'
                                     class='l-b-search-input l-b-search-input-textarea' name='l-b-search'
                                     placeholder='Search Lightbulb'></textarea>
-                                <div class='clear-post-button-cont' style='background-color:green;'>
-                                    <div class='clear-button' onclick="clear_textarea()" style='background-color:;'>
+                                <div class='clear-post-button-cont'>
+                                    <div class='clear-button' onclick="clear_textarea()">
                                         <i class="fa fa-remove" style='position:absolute;left:5px;top:7px;'></i>
                                     </div>
                                 </div>
@@ -597,7 +594,7 @@ if ($page_count==1) {
 
                     <!-- -----search options btns close------ -->
                 </div>
-                <div class='side-menu-cont' style='background-color:pink'>
+                <div class='side-menu-cont'>
                 </div>
                 <!-- window wrapper -->
             </div>

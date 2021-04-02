@@ -49,7 +49,7 @@
             height: 25px;
             padding-left: 5px;
             line-height: 25px;
-            background-color: teal;
+            
         }
 
         .likes{
@@ -126,7 +126,6 @@
             min-height: 40px;
             display: flex;
             align-items: center;
-            background-color: palevioletred;
         }
 
         .clear-post-button-cont{
@@ -135,6 +134,7 @@
             flex-direction: row;
             align-items: start;
         }
+
         .post-button{
             display: flex;
             align-items: center;
@@ -144,9 +144,7 @@
             width: 30px;
             height: 30px;
             font-size: 25px;
-            
-            
-            
+             
         }
 
         .clear-button{
@@ -170,13 +168,12 @@
             padding-left: 10px;
             padding-right: 10px;
             border-radius: 10px;
-            background-color: papayawhip;
+            
         }
         
         .notification-email-cont {
             width: 100%;
             height: 55px;
-            background-color: rgb(225, 0, 255);
         }
         
         .notification-email-text {
@@ -190,7 +187,6 @@
         .notification-email-btn {
             width: 16%;
             height: 55px;
-            background-color: paleturquoise;
             float: right;
         }
         
@@ -447,6 +443,8 @@
             /* justify-content: center; */
             border-radius: 20px;
             z-index: 13;
+
+            height:50px;color:black;
             
         }
         
@@ -632,7 +630,7 @@
             background-color: rebeccapurple;
         }
         
-        .tag-devider {
+        .tag-divider {
             width: 100%;
             border-width: thin;
             border-color: transparent;
@@ -714,7 +712,7 @@
             min-height: 100vh;
         }
         
-        .search-devider {
+        .search-divider {
             margin: 0;
             width: 100%;
             border-width: thin;
@@ -727,7 +725,7 @@
             width: 700px;
             /* width: 660px; */
             /* width: 660px; */
-            background-color: thistle;
+            /* background-color: ; */
             margin-bottom: 20px;
             margin-left: 20px;
             margin-right: 20px;
@@ -740,6 +738,7 @@
             height: auto;
             /* flex-direction: row; */
             flex-direction: row-reverse;
+            padding-left:1%;padding-right:1%
         }
         .side-menu-cont{
             display: flex;
@@ -758,7 +757,6 @@
         .brainstorm-menu{
             width: 100%;
             height: 50px;
-            background-color: red;
         }
 
         .inner-side-menu-cont{
@@ -942,6 +940,7 @@
         }
         
         .signup-btn-div {
+            position: relative;
             background-color: orange;
         }
         
@@ -1059,7 +1058,6 @@
             width: 100%;
             /* height: auto; */
             min-height: 50px;
-            background-color: rgb(234, 71, 255);
             display: none;
         }
         

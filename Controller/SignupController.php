@@ -5,16 +5,18 @@ include_once("../Model/BusinessLogic/SignupModel.php");
 /**signup controller**/
 class SignUpController
 {
-    public $request;
+    public $email;
+    public $password;
 
-    public function __construct($request)
+    public function __construct($email,$password)
     {
-        $this->request = $request;
+        $this->email = $email;
+        $this->password = $password;
     }
 
     public function signUpUser()
     {
-        $signUpModel = new SignUpModel($this->request);
+        $signUpModel = new SignUpModel($this->$email,$this->$password);
         // return $SearchModel->query;
         return $signUpModel->signUpUserToDatabase();
     }

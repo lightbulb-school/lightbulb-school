@@ -21,62 +21,65 @@ $(document).ready(function () {
         var l_b_search = $("#l-b-search").val();
 
         //Make AJAX request
-        var base_url = window.location;
-        // alert(base_url);
         $.ajax({
             type: "POST",
-            url: base_url + 'Routes/Web.php',
-            // url: 'http://ec2-18-225-33-80.us-east-2.compute.amazonaws.com/Routes/Web.php',
-            // http://ec2-18-225-33-80.us-east-2.compute.amazonaws.com/Routes/Web.php
+            url:'Routes/Web.php', // No "../" because the file is included on index.php
             data: {search_item:l_b_search},
             success: function (data) {
-                // alert(data);
-                // alert('data');
-
-                // alert(base_url);
-                // $("#search-results-cont").load('View/home.php?search=' + data + ' #inner-search-results-cont');
-                
-                // $("#search-results-cont").load(base_url + 'View/home.php?search=' + encodeURIComponent(data) + ' #inner-search-results-cont');
-                $("#search-results-cont").load(base_url + 'View/home.php?search=' + encodeURIComponent( data) + ' #inner-search-results-cont');
-                // $("#search-results-cont").load('View/home.php?search=' + data + ' #inner-search-results-cont');
-
-                // var search_for_item_btn_count = 0;
-                // var elmnt = document.getElementById("lightbulb-home-page-body");
-                // scroll_to_bottom(search_for_item_btn_count, elmnt);
-                // alert('testxxx')
-
-                // setTimeout(
-                //     function() 
-                //     {
-                //       //do something special
-                //     }, 5000);
-
-                
-                
+                $("#search-results-cont").load('View/home.php?search=' + encodeURIComponent(data) + ' #inner-search-results-cont');                            
             },
-            error: function(xhr, status, error) {
-               // check status && error
-            //    alert(xhr);
-            //    alert(status);
-            //    alert(error);
-
-            },
-            dataType: 'text'
         });
         // display search results------------
         search_for_item();
     });
 
-    // Listen to submit event on the <form> itself! and post signup data---------------------
-    $('#signup-formx').submit(function (e) {
+
+    // -------login-------------------
+    $('#login-form').submit(function (e) {
         // Prevent form submission which refreshes page
         e.preventDefault();
-        var l_b_search = $("#l-b-search").val();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        alert(email);
+        //Make AJAX request
+        $.ajax({
+            type: "POST",
+            url:'../Routes/Web.php', // Add "../" because the file is not included on index.php
+            data: {email:email,password:password},
+            success: function (data) {
+                alert(data);
+                // $("#search-results-cont").load(base_url + 'View/home.php?search=' + encodeURIComponent( data) + ' #inner-search-results-cont');
+            }, 
+        });
+        
+    });
+    
+    
+    
+    
+    
+    
+    
+    // ---------------------------------------------
+
+
+    // Listen to submit event on the <form> itself! and post signup data---------------------
+    $('#signup-form').submit(function (e) {
+        // Prevent form submission which refreshes page
+        e.preventDefault();
+
+        alert('testing');
+        var user_name = $("#user_name").val();
+        var user_email = $("#user_email").val();
+        var password = $("#password").val();
+        
+        alert(password);
+
         //Make AJAX request
         $.ajax({
             type: "POST",
             url: 'Routes/web.php',
-            data: { search_item: l_b_search },
+            data: { user_name: user_name,user_email:user_email,password:password },
             success: function (data) {
                 alert(data);
             }
@@ -84,7 +87,6 @@ $(document).ready(function () {
         // display search results------------
         search_for_item();
     });
-
     // -------------------------------
 
 });

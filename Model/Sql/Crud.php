@@ -5,30 +5,29 @@ include_once("../Routes/DatabaseConnect.php");
 
 class Crud
 {
-    public $query;
+    public $search_query;
 
     // read from database
-    public function __construct($query, $table='questions')
+    public function __construct($search_query, $table='questions')
     {
-        $this->query = $query;
+        $this->search_query = $search_query;  
     }
 
     public function createData()
     {
         $conn = new DatabaseConnect('localhost', 'test', 'root', '');
-        $conn = $conn->searchDatabase();
+        $conn = $conn->connectToDatabase();
         
-        // $query=$conn->query("INSERT INTO `search_table`(`search_id`, `user_id`, `r_question`, `r_answer`, `image_meta_data`, `title`, `publisher`, `lb_url`, `lb_date`, `status`) VALUES (0,'0','$question','$answer','0','$title','$publisher','$lb_url','$lb_date','$status')");
-        // return $this->query;
+        // search_query=$conn->query("INSERT INTO `search_table`(`search_id`, `user_id`, `r_question`, `r_answer`, `image_meta_data`, `title`, `publisher`, `lb_url`, `lb_date`, `status`) VALUES (0,'0','$question','$answer','0','$title','$publisher','$lb_url','$lb_date','$status')");
+        // return $this->search_query;
         // return "ok it works";
     }
 
     /** Query database**/
     public function readData()
     {
-        return $this->query;
+        return $this->search_query;
         // return "ok it works";
-        
     }
 
     public function updateData()

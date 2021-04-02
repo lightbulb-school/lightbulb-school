@@ -20,7 +20,7 @@ class DatabaseConnect
     }
 
     /** Query database**/
-    public function searchDatabase()
+    public function connectToDatabase()
     {
         try {
             return $conn = new PDO("mysql:host=$this->hostname;dbname=$this->database",$this->username,$this->password);

@@ -19,10 +19,14 @@ try {
     id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     first_name VARCHAR(30) NOT NULL,
     last_name VARCHAR(30) NOT NULL,
+    user_name VARCHAR(30) NOT NULL,
     email VARCHAR(50),
     phone_number VARCHAR(30) NOT NULL,
     user_type VARCHAR(30) NOT NULL,
     password VARCHAR(30) NOT NULL,
+    city VARCHAR(30) NOT NULL,
+    country VARCHAR(30) NOT NULL,
+    region VARCHAR(30) NOT NULL,
     status INT(30) NOT NULL,
     deleted INT(30) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -122,6 +126,11 @@ try {
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
     )";
     $conn->exec($sql);
+    
+    // *******************************************
+
+
+    // *********************************************
     echo "DB created successfully";
 }
 catch(PDOException $e)

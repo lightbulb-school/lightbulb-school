@@ -17,27 +17,38 @@ include('../View/head.php');
                 <input type='text' id='last_name' name='last_name' value='' placeholder='last name'
                     class='login-text-input login-text' required>
                 <br>
-                <input type='email' id='user_email' name='user_email' value='' placeholder='last name'
+                <input type='user_name' id='user_name' name='user_name' value='' placeholder='user name'
                     class='login-text-input login-text' required>
                 <br>
-                <input type='tel' id='user_phone' name='user_phone' value='' placeholder='last name'
+                <input type='user_email' id='user_email' name='user_email' value='' placeholder='user email'
                     class='login-text-input login-text' required>
                 <br>
-                <input type='text' id='user_type' name='user_type' value='' placeholder='last name'
+                <input type='tel' id='phone_number' name='phone_number' value='' placeholder='phone number'
                     class='login-text-input login-text' required>
                 <br>
-                <input type='password' id='password_1' name='password_1' value='' placeholder='new password'
+                <input type='text' id='user_type' name='user_type' value='' placeholder='user type'
                     class='login-text-input login-text' required>
                 <br>
-                <input type='password' id='password_2' name='password_2' value='' placeholder='confirm password'
+                <input type='password' id='city' name='city' value='' placeholder='city'
                     class='login-text-input login-text' required>
-
+                <br>
+                <input type='password' id='country' name='country' value='' placeholder='country'
+                    class='login-text-input login-text' required>
+                <br>
+                <input type='password' id='region' name='region' value='' placeholder='region'
+                    class='login-text-input login-text' required>
+                <br>
+                <input type='password' id='password_1' name='password_1' value='' placeholder='password 1'
+                    class='login-text-input login-text' required>
+                <br>
+                <input type='password' id='password_2' name='password_2' value='' placeholder='password 2'
+                    class='login-text-input login-text' required>
                 <div class='login-text-input login-signup-cont'>
                     <div class='signup-btns login-btn-div'>
                         <input type="submit" value="SignUp" class='signup-btn'>
                     </div>
                 </div>
-                <div class='login-text-input login-forgot-password' onclick="location.href='View/login.php'">
+                <div class='login-text-input login-forgot-password' onclick="location.href='login.php'">
                     back to login
                 </div>
             </form>
