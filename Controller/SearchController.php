@@ -1,12 +1,12 @@
 <?php
 // include('../somthing.php');
-include_once("../Model/BusinessLogic/SearchModel.php");
+include_once "../Model/BusinessLogic/Search.php";
 
 /**search controller**/
 class SearchController
 {
     public $request;
-    
+
     public function __construct($request)
     {
         $this->request = $request;
@@ -14,9 +14,9 @@ class SearchController
 
     public function search()
     {
-        $SearchModel = new SearchModel($this->request);
+        $SearchObject = new Search($this->request);
         // return $SearchModel->query;
-        return $SearchModel->searchDatabase();
-        
+        return $SearchObject->searchQuestions();
+
     }
 }

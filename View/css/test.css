@@ -42,10 +42,14 @@ footer {
 }
 
 .search-input-cont-placeholder{
+    width: 700px;
     background-color:#850050;
 }
 .inner-search-place-holder{
-    width:700px;height:100px;background-color:grey;position:fixed;bottom:0px;
+    width:700px;
+    height:100px;
+    background-color:rgb(36, 4, 4);
+    position:fixed;bottom:0px;
 }
 .search-input-cont{
     border-color:#850050;
@@ -78,7 +82,8 @@ footer {
     background-color:red
 }
 .answer-bubble-cont{
-    display:nonex;background-color:green
+    display:nonex;
+    background-color:green
 }
 .question-bubble-cont{
     display:nonex;background-color:green
@@ -88,4 +93,58 @@ footer {
 }
 .window-wrapper{
     background-color:#9acd32;
-} */
+} 
+
+.citation-format-cont {
+    background-color: purple;
+}
+
+.i-con-propaties {
+    color: rgb(128, 0, 122);
+}
+
+.search-clipboard {
+    width: 30px;
+    height: 30px;
+    right: 0;
+    position: absolute;
+    background-color: rebeccapurple;
+}
+
+.source-type {
+    background-color: thistle;
+}
+
+.times-copied {
+    background-color: orange;
+}
+
+
+
+.name-and-pic-cont {
+    background-color: salmon;
+}
+
+.search-answer-pic {
+    background-color: #6495ED;
+}
+
+.search-answer-name {
+    background-color: rgb(96, 244, 140);
+}
+
+.search-answer-img {
+    background-color: rgb(96, 234, 244);
+}
+
+.search-answer-cfg-img {
+    background-color: rgb(244, 96, 224);
+}
+
+@media screen and (max-width: 400px) {
+    .search-input-cont-placeholder{
+        background-color:#349c1a !important;
+    }
+
+}
+ */

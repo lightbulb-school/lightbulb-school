@@ -36,14 +36,16 @@ $("#l-b-search").focusin(function() {
 });
 
 function switch_to_Apa_citation($answer_count) {
-    alert($answer_count);
+    // alert($answer_count);
+    $(".hide-references-cont").show(1000);
     $(".apa-citation"+$answer_count).show();
-    $(".harvard-citation"+$answer_count).hide();
-
+    $(".harvard-citation" + $answer_count).hide();
+    
 }
 
 function switch_to_Harvard_citation($answer_count) {
-    alert($answer_count);
+    // alert($answer_count);
+    $(".hide-references-cont").show(1000);
     $(".apa-citation"+$answer_count).hide();
     $(".harvard-citation"+$answer_count).show();
 

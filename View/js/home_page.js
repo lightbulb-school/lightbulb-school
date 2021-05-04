@@ -80,6 +80,9 @@ function scroll_to_bottom(search_for_item_btn_count, elmnt) {
         }
         next();
         $("#l-b-search").removeClass("add-height-transition");
+        // hide the home-chat design banner
+        $('.lightbulb-home-chat-design-splash-screen').fadeOut(1000);
+
     });
 }
 

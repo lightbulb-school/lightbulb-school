@@ -10,6 +10,7 @@ function search_for_item($unique_id) {
     $("#l-b-search").css("overflow-y", "hidden");
     $(".search-results-cont").fadeIn(3000);
     $(".banner-cont").fadeOut();
+    $(".no-matches-found-cont-wrapper").show();
     // alert('test');
     // $('#l-b-search').val("");//important if active clears text box
     // ***********

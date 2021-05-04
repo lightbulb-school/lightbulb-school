@@ -13,6 +13,7 @@
     <link type="text/css" rel="stylesheet" href="<?php echo$css_path ?>/question-options.css" />
     <link type="text/css" rel="stylesheet" href="<?php echo$css_path ?>/rightsidemenu.css" />
     <link type="text/css" rel="stylesheet" href="<?php echo$css_path ?>/test.css" />
+    <link type="text/css" rel="stylesheet" href="<?php echo$css_path ?>/home-chat-design-interface.css" />
     <!--  -->
     <link type="text/css" rel="stylesheet" href="<?php echo$css_path ?>/Shadows-Into-Light-and-display-fonts.css" />
     <link type="text/css" rel="stylesheet"

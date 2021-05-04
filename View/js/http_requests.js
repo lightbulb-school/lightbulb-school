@@ -34,6 +34,25 @@ $(document).ready(function () {
     });
 
 
+    // -------home-login-login-signup-form-------------------
+    $('#home-login-signup-form').submit(function (e) {
+        // Prevent form submission which refreshes page
+        e.preventDefault();
+        var email = $("#email").val();
+        var password = $("#password").val();
+        // alert(email);
+        //Make AJAX request
+        $.ajax({
+            type: "POST",
+            url:'Routes/Web.php', // Add "../" because the file is not included on index.php
+            data: {email:email,password:password},
+            success: function (data) {
+                alert(data);
+                // $("#search-results-cont").load(base_url + 'View/home.php?search=' + encodeURIComponent( data) + ' #inner-search-results-cont');
+            }, 
+        });
+        
+    });
     // -------login-------------------
     $('#login-form').submit(function (e) {
         // Prevent form submission which refreshes page

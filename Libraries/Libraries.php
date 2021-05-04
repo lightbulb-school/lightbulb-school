@@ -26,6 +26,10 @@
 <script src="<?php echo$js_path ?>/manage_bubble.js" type="text/javascript"></script>
 <script src="<?php echo$js_path ?>/home_page.js" type="text/javascript"></script>
 <script src="<?php echo$js_path ?>/flyto.js" type="text/javascript"></script>
+<!-- test -->
+<script src="<?php echo$js_path ?>/auto_load.js" type="text/javascript"></script>
+<script src="<?php echo$js_path ?>/sticky_question.js" type="text/javascript"></script>
+<!-- test -->
 <script src="<?php echo$js_path ?>/http_requests.js" type="text/javascript"></script>
 <!-- test code -->
 <script src="<?php echo$js_path ?>/clear_textarea.js" type="text/javascript"></script>

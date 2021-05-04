@@ -1,9 +1,9 @@
 <?php
 // include('../somthing.php');
-include_once "../Model/BusinessLogic/SignupUpUser.php";
+include_once "../Model/DomainObjects/Users.php";
 
-/**signup controller**/
-class SignUpController
+/**signup User Logic**/
+class SignUpuser
 {
     public $email;
     public $password;
@@ -16,18 +16,18 @@ class SignUpController
 
     public function signUpUser()
     {
-        $signUpModel = new Users($this->email, $this->password);
+        $UsersObject = new Users();
         // check if user exists before signing up new user;
-        $userExists = $signUpModel->readUsers();
+        $userExists = $UsersObject->readUsers();
 
         if ($userExists) {
             //user exists
             return "it works";
         } else {
             //user does not exist
-            $UsersObject = new Users($this->email, $this->password);
             return $UsersObject->createUsers();
-            // return "it works";
+
         }
     }
+
 }
